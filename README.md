@@ -1,5 +1,5 @@
 # General info
-This is my own web for digital electronics 1 cource at BUT
+Hi:) My name is dima, I am a 2-year undergraduate student at Brno University of technologies. This is my own web for digital electronics 1 cource at BUT
 ## Codes
 Here I will upload my codes
 ### My project
