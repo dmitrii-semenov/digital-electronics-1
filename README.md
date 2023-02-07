@@ -7,3 +7,5 @@ My project consist of:
 1. Problem implementation
 2. Solution
 3. Presentation
+4. Scoring
+5. Discussion
