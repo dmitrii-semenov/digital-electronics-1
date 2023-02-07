@@ -1,6 +1,8 @@
-# General info, codes
+# General info
 This is my own web for digital electronics 1 cource at BUT
-## My project
+## Codes
+Here I will upload my codes
+### My project
 My project consist of:
 1. Problem implementation
 2. Solution
