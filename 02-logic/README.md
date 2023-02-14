@@ -25,7 +25,7 @@
 
 <a name="part1"></a>
 
-# Lab 2: INSERT_YOUR_FIRSTNAME INSERT_YOUR_LASTNAME
+# Lab 2: Dmitrii Semenov
 
 ### 2-bit comparator
 
