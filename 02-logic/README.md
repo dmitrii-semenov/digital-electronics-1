@@ -61,8 +61,8 @@
         wait for 100 ns;
         -- Expected output
         assert ((s_B_greater_A = '0') and
-        	(s_B_equals_A = '0') and
-        	(s_B_less_A = '1'))
+                (s_B_equals_A = '0') and
+                (s_B_less_A = '1'))
         -- If false, then report an error
         report "Input combination A=1001 B=1000 FAILED" severity error;
 
@@ -72,8 +72,8 @@
         wait for 100 ns;
         -- Expected output
         assert ((s_B_greater_A = '0') and
-            (s_B_equals_A = '1') and
-            (s_B_less_A = '0'))
+            	(s_B_equals_A = '1') and
+          	    (s_B_less_A = '0'))
         -- If false, then report an error
         report "Input combination A=1100 B=1100 FAILED" severity error;
 
@@ -83,21 +83,21 @@
         wait for 100 ns;
         -- Expected output
         assert ((s_B_greater_A = '1') and
-            (s_B_equals_A = '0') and
-            (s_B_less_A = '0'))
+                (s_B_equals_A = '0') and
+                (s_B_less_A = '0'))
         -- If false, then report an error
         report "Input combination A=1100 B=1011 FAILED" severity error;
 
         -- 4 test case
         s_b <= "1010"; 
-        s_a <= "0101"; 
+        s_a <= "0000"; 
         wait for 100 ns;
         -- Expected output
         assert ((s_B_greater_A = '1') and
-            (s_B_equals_A = '0') and
-            (s_B_less_A = '0'))
+                (s_B_equals_A = '0') and
+                (s_B_less_A = '0'))
         -- If false, then report an error
-        report "Input combination A=1010 B=0101 FAILED" severity error;
+        report "Input combination A=1010 B=0000 FAILED" severity error;
 
         -- 5 test case with intentional mistake
         s_b <= "0011"; 
@@ -105,8 +105,8 @@
         wait for 100 ns;
         -- Expected output
         assert ((s_B_greater_A = '0') and
-            (s_B_equals_A = '0') and
-            (s_B_less_A = '1'))
+                (s_B_equals_A = '1') and
+                (s_B_less_A = '0'))
         -- If false, then report an error
         report "Input combination A=0011 B=1010 FAILED" severity error;
 
