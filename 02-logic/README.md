@@ -51,22 +51,65 @@
 
 ```vhdl
     p_stimulus : process
-    begin
-        -- Report a note at the beginning of stimulus process
-        report "Stimulus process started" severity note;
+	begin
+		-- Report a note at the beginning of stimulus process
+		report "Stimulus process started" severity note;
 
-        -- First test case
+		-- 1 test case
         s_b <= "1000"; 
         s_a <= "1001"; 
         wait for 100 ns;
         -- Expected output
         assert ((s_B_greater_A = '0') and
-                (s_B_equals_A  = '0') and
-                (s_B_less_A    = '1'))
+        	(s_B_equals_A = '0') and
+        	(s_B_less_A = '1'))
         -- If false, then report an error
         report "Input combination A=1001 B=1000 FAILED" severity error;
 
-        -- Report a note at the end of stimulus process
+        -- 2 test case
+        s_b <= "1100"; 
+        s_a <= "1100"; 
+        wait for 100 ns;
+        -- Expected output
+        assert ((s_B_greater_A = '0') and
+            (s_B_equals_A = '1') and
+            (s_B_less_A = '0'))
+        -- If false, then report an error
+        report "Input combination A=1100 B=1100 FAILED" severity error;
+
+        -- 3 test case
+        s_b <= "1100"; 
+        s_a <= "1011"; 
+        wait for 100 ns;
+        -- Expected output
+        assert ((s_B_greater_A = '1') and
+            (s_B_equals_A = '0') and
+            (s_B_less_A = '0'))
+        -- If false, then report an error
+        report "Input combination A=1100 B=1011 FAILED" severity error;
+
+        -- 4 test case
+        s_b <= "1010"; 
+        s_a <= "0101"; 
+        wait for 100 ns;
+        -- Expected output
+        assert ((s_B_greater_A = '1') and
+            (s_B_equals_A = '0') and
+            (s_B_less_A = '0'))
+        -- If false, then report an error
+        report "Input combination A=1010 B=0101 FAILED" severity error;
+
+        -- 5 test case with intentional mistake
+        s_b <= "0011"; 
+        s_a <= "1010"; 
+        wait for 100 ns;
+        -- Expected output
+        assert ((s_B_greater_A = '0') and
+            (s_B_equals_A = '0') and
+            (s_B_less_A = '1'))
+        -- If false, then report an error
+        report "Input combination A=0011 B=1010 FAILED" severity error;
+
         report "Stimulus process finished" severity note;
         wait;
     end process p_stimulus;
