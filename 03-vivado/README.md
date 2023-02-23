@@ -22,7 +22,7 @@ begin
          b when (slc = "01") else
          c when (slc = "10") else
          d;   
-end Behavioral;
+end architecture Behavioral;
 ```
 
 2. Screenshot with simulated time waveforms. Always display all inputs and outputs (display the inputs at the top of the image, the outputs below them) at the appropriate time scale!
