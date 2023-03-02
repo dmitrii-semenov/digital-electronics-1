@@ -29,7 +29,7 @@
 
 ### LED(7:4) indicators
 
-1. Complete the truth table for LEDs[7:4] according to comments in source code.
+1. Complete the truth table for LEDs(7:4) according to comments in source code.
 
    | **Hex** | **Inputs** | **LED4** | **LED5** | **LED6** | **LED7** |
    | :-: | :-: | :-: | :-: | :-: | :-: |
@@ -50,7 +50,7 @@
    | E | 1110 |  |  |  |  |
    | F | 1111 |  |  |  |  |
 
-2. Listing of LEDs[7:4] part of VHDL architecture from source file `top.vhd`. Try to write logic functions as simple as possible. Always use syntax highlighting, meaningful comments, and follow VHDL guidelines:
+2. Listing of LEDs(7:4) part of VHDL architecture from source file `top.vhd`. Try to write logic functions as simple as possible. Always use syntax highlighting, meaningful comments, and follow VHDL guidelines:
 
    ```vhdl
    --------------------------------------------------------------------
@@ -68,3 +68,7 @@
    -- Turn LED(7) on if input value is a power of two, ie 1, 2, 4, or 8
    -- LED(7) <= WRITE YOUR CODE HERE
    ```
+
+3. Screenshot with simulated time waveforms for LED(7:4). Always display all inputs and outputs (display the inputs at the top of the image, the outputs below them) at the appropriate time scale!
+
+   ![your figure]()
