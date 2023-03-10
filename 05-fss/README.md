@@ -24,14 +24,16 @@ architecture behavioral of jk_ff_rst is
                     sig_q <= sig_q;
                 else
                     sig_q <= '0';
+                end if;
             else
                 if (k = '0') then
                     sig_q <= '1';
                 else
                     sig_q <= not sig_q;
+                end if;
             end if;
-        end if;
-        end process p_jk_ff_rst;
+    end if;
+    end process p_jk_ff_rst;
     q     <= sig_q;
     q_bar <= not sig_q;
 end architecture behavioral;
