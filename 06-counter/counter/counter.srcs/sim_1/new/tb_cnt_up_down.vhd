@@ -69,7 +69,6 @@ begin
 
     end loop;
     wait;                               -- Process is suspended forever
-
   end process p_clk_gen;
 
   --------------------------------------------------------
