@@ -54,7 +54,6 @@ begin
   --------------------------------------------------------
   p_cnt_up_down : process (clk) is
   begin
-
     if rising_edge(clk) then
       if (rst = '1') then           -- Synchronous reset
         sig_cnt <= (others => '0'); -- Clear all bits
@@ -66,7 +65,6 @@ begin
           end if;
       end if;
     end if;
-
   end process p_cnt_up_down;
 
   -- Output must be retyped from "unsigned" to "std_logic_vector"

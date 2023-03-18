@@ -60,7 +60,7 @@ begin
   p_clk_gen : process is
   begin
 
-    while now < 750 ns loop             -- 75 periods of 100MHz clock
+    while now < 500 ns loop             -- 75 periods of 100MHz clock
 
       sig_clk_100mhz <= '0';
       wait for c_CLK_100MHZ_PERIOD / 2;
@@ -104,9 +104,9 @@ begin
 
     -- Change counter direction
     sig_cnt_up <= '1';
-    wait for 380 ns;
+    wait for 280 ns;
     sig_cnt_up <= '0';
-    wait for 186 ns;
+    wait for 136 ns;
 
     -- Disable counting
     sig_en <= '0';
