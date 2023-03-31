@@ -84,8 +84,8 @@ begin
       -- FOR SIMULATION, KEEP THIS VALUE TO 1
       -- FOR IMPLEMENTATION, CALCULATE VALUE: 250 ms / (1/100 MHz)
       -- 1   @ 10 ns
-      -- ??? @ 250 ms
-      g_MAX => 25000000
+      -- 25000000 @ 250 ms
+      g_MAX => 1
     )
     port map (
       clk => clk,
