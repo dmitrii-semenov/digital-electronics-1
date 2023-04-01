@@ -34,7 +34,9 @@
 
 2. Screenshot with simulated time waveforms. The full functionality of the entity must be verified. Always display all inputs and outputs (display the inputs at the top of the image, the outputs below them) at the appropriate time scale!
 
-   ![your figure]()
+   ![https://github.com/dmitrii-semenov/digital-electronics-1/blob/main/08-traffic_lights/wave.png](https://github.com/dmitrii-semenov/digital-electronics-1/blob/main/08-traffic_lights/wave.png)
+
+`P.S. I did the waveform simulation in VS Code and I couldn't add state signal to the output in waveform file. Instead of this WEST and SOUTH LEDs were added in order to control the color of traffic lights.`
 
 3. Figure of Moor-based state diagram of the traffic light controller with *speed button* to ensure a synchronous transition to the `WEST_GO` state. The image can be drawn on a computer or by hand. Always name all states, transitions, and input signals!
 
