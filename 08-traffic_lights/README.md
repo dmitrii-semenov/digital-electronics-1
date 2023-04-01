@@ -26,9 +26,9 @@
     begin
 
     if (rising_edge(clk)) then
-      if (rst = '1') then                    -- Synchronous reset
-        sig_state <= WEST_STOP;              -- Init state
-        sig_cnt   <= c_ZERO;                 -- Clear delay counter
+      if (rst = '1') then               
+        sig_state <= WEST_STOP;          
+        sig_cnt   <= c_ZERO;    
       elsif (sig_en = '1') then
 
         case sig_state is
@@ -83,9 +83,6 @@
 
 
           when others =>
-            -- It is a good programming practice to use the
-            -- OTHERS clause, even if all CASE choices have
-            -- been made.
             sig_state <= WEST_STOP;
             sig_cnt   <= c_ZERO;
 
