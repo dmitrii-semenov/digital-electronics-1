@@ -22,14 +22,14 @@ end mux_trig_8bit;
 architecture Behavioral of mux_trig_8bit is
 begin
     
---    data0 <= "10100100"; -- Set - on 1 segment of display
---    data1 <= "10100100"; -- Set - on 2 segment of display
---    data2 <= "10100100"; -- Set - on 3 segment of display
---    data3 <= "10100100"; -- Set - on 4 segment of display
---    data4 <= "10100100"; -- Set - on 5 segment of display
---    data5 <= "10100100"; -- Set - on 6 segment of display
---   data6 <= "10100100"; -- Set - on 7 segment of display
---    data7 <= "10100100"; -- Set - on 8 segment of display
+    data0 <= "10100100"; -- Set - on 1 segment of display
+    data1 <= "10100100"; -- Set - on 2 segment of display
+    data2 <= "10100100"; -- Set - on 3 segment of display
+    data3 <= "10100100"; -- Set - on 4 segment of display
+    data4 <= "10100100"; -- Set - on 5 segment of display
+    data5 <= "10100100"; -- Set - on 6 segment of display
+    data6 <= "10100100"; -- Set - on 7 segment of display
+    data7 <= "10100100"; -- Set - on 8 segment of display
 
     p_mux_trig_8bit : process is
     begin
@@ -44,14 +44,14 @@ begin
             data7 <= "10100100"; -- Set - on 8 segment of display
         else
             if rising_edge(control) then
-                data0 <= indat;
-                data1 <= data0; 
-                data2 <= data1; 
-                data3 <= data2; 
-                data4 <= data3; 
-                data5 <= data4; 
-                data6 <= data5; 
                 data7 <= data6; 
+                data6 <= data5; 
+                data5 <= data4; 
+                data4 <= data3; 
+                data3 <= data2; 
+                data2 <= data1; 
+                data1 <= data0; 
+                data0 <= indat;
             end if;
         end if;
     end process p_mux_trig_8bit;
