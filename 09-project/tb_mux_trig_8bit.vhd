@@ -35,39 +35,40 @@ begin
             data6     => data6,
             data7     => data7
         );
-
-        process
-    begin
-        wait for 10 ns;
-        control <= '0';
-        wait for 10 ns;
-        control <= '1';
-        wait for 10 ns;
-        control <= '0';
-        wait for 10 ns;
-        control <= '1';
-        wait;
-    end process;
-
+        
     p_stimulus : process
     begin
+    	data0 <= "10100100"; -- Set - on 1 segment of display
+		data1 <= "10100100"; -- Set - on 2 segment of display
+    	data2 <= "10100100"; -- Set - on 3 segment of display
+    	data3 <= "10100100"; -- Set - on 4 segment of display
+    	data4 <= "10100100"; -- Set - on 5 segment of display
+    	data5 <= "10100100"; -- Set - on 6 segment of display
+    	data6 <= "10100100"; -- Set - on 7 segment of display
+    	data7 <= "10100100"; -- Set - on 8 segment of display
         rst <= '1';
+        control <= '0';
         wait for 10 ns;
         rst <= '0';
-
         indat <= "00000000"; -- Input value
         wait for 10 ns;
+        control <= '1';
         indat <= "00000001"; -- Input value
         wait for 10 ns;
+        control <= '0';
         indat <= "00000010"; -- Input value
         wait for 10 ns;
+        control <= '1';
         indat <= "00000011"; -- Input value
         wait for 10 ns;
+        control <= '0';
         indat <= "00000100"; -- Input value
         wait for 10 ns;
+        control <= '1';
         indat <= "00000101"; -- Input value
         wait for 10 ns;
+        control <= '0';
         indat <= "00000110"; -- Input value
         wait;
     end process p_stimulus;
-end testbench;
+end architecture testbench;
